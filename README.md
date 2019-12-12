@@ -30,7 +30,7 @@ Para la realización del curso se empleará una placa de desarrollo NodeMCU basa
 
 *La ROM es externa, por lo que depende en concreto de la que tenga instalada la placa de desarrollo. En el caso de la placa NodeMCU es de 4MB.
 
-![image alt text](doc/files/image_0.png)
+![Esquema de disposición de pines de la placa de desarrollo.](doc/files/image_0.png)
 
 El módulo dispone de un regulador interno de 5V a 3.3V, por lo que se puede alimentar directamente del USB. En algunos casos es conveniente emplear un adaptador externo de corriente, dado que la corriente que da un PC por el puerto USB se encuentra limitada a 500mA.
 
@@ -52,8 +52,8 @@ En esta sección repasaremos como instalar y configurar los programas necesarios
 
 ## Instalación drivers USB
 
-Es necesario instalar los drivers para el convertidor de USB a USART a 3.3V incluido en la placa de desarrollo. En el mercado existen distintos fabricantes de esta placa que pueden integrar distintos circuitos integrados que realizan esta función. En este caso, deberemos instalar el driver correspondiente. En cualquier caso, no existe ningún tipo de incompatibilidad entre ellos, puduiendose instalar ámbos al unísono. En la imagen a continuación podemos diferenciar los dos modelos más extendidos que de convertidor de USB a USART en las placas NodeMCU, que son el CH430G y el CP2102/3
-![image alt text](doc/files/image_6.png)
+Es necesario instalar los drivers para el convertidor de USB a USART a 3.3V incluido en la placa de desarrollo. En el mercado existen distintos fabricantes de esta placa que pueden integrar distintos circuitos integrados que realizan esta función. En este caso, deberemos instalar el driver correspondiente. En cualquier caso, no existe ningún tipo de incompatibilidad entre ellos, puduiendose instalar ámbos al unísono. En la imagen a continuación podemos diferenciar los dos modelos más extendidos que de convertidor de USB a USART en las placas NodeMCU, que son el CH340G y el CP2102/3
+![Comparativa visual entre las placas CP2102 y CH340G](doc/files/image_6.png)
 
 En el caso del chip CP2102/3, del fabricante SiLabs, podremos descargar los drivers para los distintos sistemas operativos desde la página web del fabricante:
 
@@ -70,19 +70,19 @@ En el caso del chip CH430G, podremos descargar los driver desde la siguiente pá
 
 ### MAC OSX
 
-Para identificar que tenemos instalado correctamente los drivers del dispositivo, podremos ver en el informe del sistema (acerca de este mac) el dispositivo USB CP2102 USB to UART Bridge Controller o el correspondiente al CH430G
+Para identificar que tenemos instalado correctamente los drivers del dispositivo, podremos ver en el informe del sistema (acerca de este mac) el dispositivo USB CP2102 USB to UART Bridge Controller o el correspondiente al CH340G
 
-![image alt text](doc/files/image_1.png)
+![Pantalla "Informe del sistema" Mac OSX](doc/files/image_1.png)
 
 En las últimas versiones de macOS es necesario habilitar el driver en el panel de control para que se ejecute. Para ello hay que ir a la sección de seguridad y privacidad y permitir la ejecución del software.
 
-![image alt text](doc/files/image_2.png)
+![Pantalla "Privacidad y Seguridad" Mac OSX](doc/files/image_2.png)
 
 ### Windows
 
 Tras descargar y ejecutar el instalador del driver provisto por el fabricante y, si fuera necesario, tras reiniciar el equipo nos debe aparecer algo similar a la siguiente imagen en el administrador de dispositivos (depende del controlador USB a UART):
 
-![image alt text](doc/files/image_3.png)
+![Pantalla "Administrador de dispositivos" Windows](doc/files/image_3.png)
 
 Una vez identificado, habrá que recordar el puerto COM para configurarlo en la aplicación arduino.
 
@@ -102,11 +102,11 @@ Lo primero que tenemos que añadir al repositorio de placas de desarrollo compat
 
 [http://arduino.esp8266.com/stable/package_esp8266com_index.json](http://arduino.esp8266.com/stable/package_esp8266com_index.json)
 
-![image alt text](doc/files/image_4.png)
+![Pantalla "Preferencias" IDE Arduino](doc/files/image_4.png)
 
 Una vez añadida le damos a OK y vamos al gestor de tarjetas (Herramientas -> placa-> Gestor de tarjetas). Allí deberemos buscar la nueva tarjeta o placa que hemos añadido, en este caso la ESP8266. Seleccionamos la versión y le damos a instalar. Esto llevará unos minutos mientras se descargan todas las utilidades y librerías.
 
-![image alt text](doc/files/image_5.png)
+![Pantalla "Gestor de Tarjetas" IDE Arduino](doc/files/image_5.png)
 
 Ya sólo nos queda seleccionar la nueva tarjeta, en este caso la placa **NodeMCU V1.0** para que el sistema nos detecte la placa.
 
